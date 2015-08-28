@@ -25,7 +25,8 @@
 
   </head>
   <body>
-    <div class="navbar navbar-default">
+  <nav class="navbar navbar-fixed-top dnl-hidden">
+    <!--<div class="navbar navbar-default">-->
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
             <span class="icon-bar"></span>
@@ -68,8 +69,72 @@
             </li>
         </ul>
     </div>
-</div>
+<!--</div>-->
+</nav>
+<br><br>
 
+<!-- ========= CONTENT WRAP ========= -->
+
+<!-- Enter your page content below here
+    Available navbar effects: dnl-push, dnl-overlay
+    Available navbar versions: dnl-visible, dnl-hidden 
+    Available content effects: content-opacity -->
+    <div class="content-wrap dnl-hidden content-opacity" data-effect="dnl-overlay">
+      <div class="container-fluid">
+        <h2 class="page-header">Read me carefully</h2>
+        <p class="lead">This is one of the two versions of "Dash navbar" called <em>hidden</em>. There is a key difference between these versions. <a href="../index.html">Back to all demos</a></p>
+
+        <p>This one is hidden on all devices and you can only open the left navbar by click on the toggle button or swipe.</p>
+        <br>
+
+        <h4><span class="label label-info">Tip</span> How these versions works:</h4>
+        <p>These two versions have the same HTML structure with some diffrent classes. For example for this page <code>hidden-push.html</code> there is a class <code>dnl-hidden</code> on 
+        <br><code>&lt;nav class="navbar navbar-static-top dash-navbar-top <strong>dnl-hidden</strong>"&gt;</code>, 
+        <br><code>&lt;div class="dash-navbar-left <strong>dnl-hidden</strong>"&gt;</code> and 
+        <br><code>&lt;div class="content-wrap <strong>dnl-hidden</strong>" data-effect="dnl-push"&gt;</code>.
+        <br> If you like the other version (visible), simply replace <code>dnl-hidden</code> with <code>dnl-visible</code> for all three tags.</p>
+        <hr>
+
+        <h3 class="page-header">Available skins</h3>
+        <p>There are two skins at the moment.</p>
+        <button type="button" class="btn btn-primary btn-dark">Dark</button>
+        <button type="button" class="btn btn-primary btn-light">Light</button>
+        <br><br>
+        <h4><span class="label label-info">Tip</span> How to choose skins:</h4>
+        <p>The default skin is dark, so if you like the dark skin, you do not need to change anything. If not change <br><code>&lt;link href="css/<strong>dash</strong>.css" rel="stylesheet"&gt;</code> to <code>&lt;link href="css/<strong>dash-light</strong>.css" rel="stylesheet"&gt;</code> <br>in this page <code>head</code> section.</p>
+        <br>
+
+        <h4><span class="label label-info">Tip</span> How to create my very own skin:</h4>
+        <p>If you like to create a new skin, you should use LESS. Simply open the <code>variables-light.less</code> or <code>variables-dark.less</code> in LESS folder, there are tons of varibales to change, and change the variables, then compile it to CSS (e.g. dash-green.css) and add it to page as mentioned above.</p>
+        <hr>
+
+        <h3 class="page-header">Available left navbar effects</h3>
+        <p>There are two effects when the left navbar toggles. Click the below buttons to see the different effects.</p>
+        <a href="hidden-push.html" class="btn btn-primary">Push</a>
+        <a href="hidden-overlay.html" class="btn btn-primary active">Overlay</a>
+        <br><br>
+        <h4><span class="label label-info">Tip</span> How to set up one of these effects:</h4>
+        <p>First choose the effect that you like and then open <code>hidden-overlay.html</code> in your text editer and find <code>&lt;div class="content-wrap" data-effect="<strong>dnl-push</strong>"&gt;</code>. <br>Do you see <code>dnl-push</code>? The default effect is <code>push (dnl-push)</code>. Now you can change <code>dnl-push</code> to one of these <code>dnl-overlay</code></p>
+        <hr>
+
+        <h3 class="page-header">Available content effects</h3>
+        <p>There is only one effect for content when the left navbar toggles. It is called "Opacity".</p>
+        <h4><span class="label label-info">Tip</span> How to set up opacity effect:</h4>
+        <p>Simply find <code>&lt;div class="content-wrap"&gt;</code> and add <code>content-opacity</code> class to it. It works for both push and overlay effects.</p>
+        <hr>
+      </div>
+    </div> <!-- /.content-wrap -->
+
+
+
+
+
+
+
+
+
+
+<!-- ============ SCRIPTS ============= -->
 <!-- Twitter Bootstrap -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
