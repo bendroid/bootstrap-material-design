@@ -1,0 +1,8 @@
+.navbar.navbar, .navbar-default.navbar {
+    background-color: #0066C1;
+    color: rgba(255,255,255,.84);
+}
+
+.dash-navbar-top .navbar-brand {
+	padding: 0;
+}
