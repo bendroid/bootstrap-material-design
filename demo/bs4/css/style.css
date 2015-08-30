@@ -590,7 +590,7 @@ body {
   background-color: #ffffff;
 }
 .sidebar-colored .sidebar-header {
-  background-color: #e91e63;
+  background-color: #2196f3;
 }
 .sidebar-colored .sidebar-toggle {
   color: #f5f5f5;
@@ -625,7 +625,7 @@ body {
 }
 .sidebar-colored .sidebar-nav li:hover > a,
 .sidebar-colored .sidebar-nav li > a:hover {
-  color: #e91e63;
+  color: #2196f3;
   background-color: #e0e0e0;
 }
 .sidebar-colored .sidebar-nav li:hover > a i,
@@ -644,7 +644,7 @@ body {
 .sidebar-colored .sidebar-nav > .open > a,
 .sidebar-colored .sidebar-nav > .open > a:hover,
 .sidebar-colored .sidebar-nav > .open > a:focus {
-  color: #e91e63;
+  color: #2196f3;
   background-color: #e0e0e0;
 }
 .sidebar-colored .sidebar-nav > .active > a,
@@ -664,11 +664,11 @@ body {
 }
 .sidebar-colored .sidebar-nav > .dropdown > .dropdown-menu > li > a:focus {
   background-color: #e0e0e0;
-  color: #e91e63;
+  color: #2196f3;
 }
 .sidebar-colored .sidebar-nav > .dropdown > .dropdown-menu > li > a:hover {
   background-color: #cecece;
-  color: #e91e63;
+  color: #2196f3;
 }
 .sidebar-colored .sidebar-nav > .dropdown > .dropdown-menu > .active > a,
 .sidebar-colored .sidebar-nav > .dropdown > .dropdown-menu > .active > a:hover,
@@ -677,7 +677,7 @@ body {
   background-color: #f5f5f5;
 }
 .sidebar-colored-inverse {
-  background-color: #e91e63;
+  background-color: #2196f3;
 }
 .sidebar-colored-inverse .sidebar-header {
   background-color: #eceff1;
