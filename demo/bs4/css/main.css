@@ -1,0 +1,74 @@
+p {
+    line-height: 2rem;
+}
+
+.card .card-image .card-title {
+    position: fixed;
+    bottom: 5px;
+    left: 0;
+    padding: 10px;
+}
+
+.card .card-title.overlay {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 300;
+    background-color: rgba(25, 137, 212, 0.88);
+    width: 100%;
+}
+
+.projects-container,
+.footer-container,
+.nav-container {
+    margin: auto 5%;
+}
+
+.drop-link:hover,
+.drop-link:focus,
+.drop-link:visited,
+.drop-link:active {
+    color: #000;
+    background-color: #039be5;
+}
+
+.page-divider {
+    width: 80%;
+    margin: 32px auto;
+}
+
+.row.projects {
+    padding: 0;
+    margin: 0 auto;
+}
+
+.brand-logo {
+    color: #fff;
+}
+
+.my-logo {
+    background-image: url(../img/ben-tiny.jpg), linear-gradient(#fff, #fff 25%, #e6e6e6);
+    border-radius: 50%;
+    box-shadow: 0 3px 7px 0 #4f4a65;
+    border: 2px solid #bd3518 !Important;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    margin: 5px;
+}
+
+.button-collapse {
+    color: #fff;
+}
+
+.card .card-reveal {
+    height: 95%;
+}
+
+.page-footer {
+    margin: 0;
+}
+
+.fixed-action-btn {
+    bottom: 45px;
+    right: 24px;
+}
