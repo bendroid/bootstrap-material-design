@@ -148,7 +148,7 @@ body {
 }
 @media (max-width: 768px) {
   .sidebar-stacked.open + .wrapper .constructor {
-    margin-left: 240px;
+    margin-left: 280px;
   }
 }
 /* -- Sidebar style ------------------------------- */
@@ -809,8 +809,8 @@ body {
 }
 @media (max-width: 768px) {
   .sidebar.open {
-    min-width: 240px;
-    width: 240px;
+    min-width: 280px;
+    width: 280px;
   }
   .sidebar .sidebar-header {
     height: 135px;

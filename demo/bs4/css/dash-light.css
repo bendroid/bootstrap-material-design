@@ -18,14 +18,13 @@ html {
 /* Dash Navbar Top = dnt
 / -------------------------------------------------- */
 
-/*
+
 .dash-navbar-top {
-  background-color: #4b8fc4;
   margin-bottom: 0;
   min-height: 61px;
 }
 
-*/
+
 .dash-navbar-top .dnl-btn-toggle {
   position: absolute;
   left: 16px;
@@ -269,8 +268,8 @@ html {
 .dash-navbar-left {
   position: absolute;
   background-color: #eff0f1;
-  width: 250px;
-  top: 61px;
+  width: 280px;
+  top: 69px;
   bottom: 0;
   overflow-y: auto;
   z-index: 999;
@@ -281,14 +280,14 @@ html {
 }
 @media (max-width: 767px) {
   .dash-navbar-left.dnl-visible {
-    left: -250px;
+    left: -280px;
   }
   .dash-navbar-left.dnl-visible.dnl-show {
     left: 0;
   }
 }
 .dash-navbar-left.dnl-hidden {
-  left: -250px;
+  left: -280px;
 }
 .dash-navbar-left.dnl-hidden.dnl-show {
   left: 0;
@@ -421,7 +420,7 @@ html {
   position: relative;
 }
 .content-wrap.dnl-visible {
-  margin-left: 250px;
+  margin-left: 280px;
 }
 @media (max-width: 767px) {
   .content-wrap.dnl-visible {
