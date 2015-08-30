@@ -25,7 +25,7 @@
   </head>
   <body>
 
-    
+<!--
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -67,6 +67,7 @@
     </div>
   </div>
 </nav>
+-->
     
     <!-- Dash Navbar Top 
     Available versions: dnl-visible, dnl-hidden -->
@@ -89,7 +90,7 @@
           <!-- This dropdown is for avatar -->
           <ul class="nav navbar-nav navbar-right navbar-avatar">
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><img src="img/avatar.jpg" class="dnt-avatar" alt="Reardestani avatar"></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><img src="img/ben-sm.jpg" class="dnt-avatar" alt="Reardestani avatar"></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="#">Standard <span>go pro</span></a></li>
                 <li><a href="#">Upload</a></li>
@@ -98,12 +99,12 @@
               </ul>
             </li>
           </ul>
-          <form class="navbar-form navbar-right dnt-navbar-form" role="search">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Search">
-            </div>
-            <button type="submit" class="btn"><span class="fa fa-search"></span></button>
-          </form>  
+          <form class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
           <!-- This dropdown is for normal links -->
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Support</a></li>
@@ -125,42 +126,81 @@
     <div class="dash-navbar-left dnl-visible">
       <p class="dnl-nav-title">Home</p>
       <ul class="dnl-nav">
+		<li>
+          <a href="#">
+            <span class="glyphicon glyphicon-user dnl-link-icon"></span>
+            <span class="dnl-link-text">Profile</span>
+          </a>
+        </li>
         <li>
           <a class="collapsed" data-toggle="collapse" href="#collapseStatistics" aria-expanded="false" aria-controls="collapseStatistics">
-            <span class="glyphicon glyphicon-stats dnl-link-icon"></span>
-            <span class="dnl-link-text">Statistics</span>
+            <span class="glyphicon glyphicon-folder-open dnl-link-icon"></span>
+            <span class="dnl-link-text">Projects</span>
             <span class="fa fa-angle-up dnl-btn-sub-collapse"></span>
           </a>
           <!-- Dropdown level one -->
           <ul class="dnl-sub-one collapse" id="collapseStatistics">
             <li>
               <a href="#">
-                <span class="fa fa-clock-o dnl-link-icon"></span>
-                <span class="dnl-link-text">Daily</span>
+                <span class="fa fa-files-o dnl-link-icon"></span>
+                <span class="dnl-link-text">Project 1</span>
               </a>
             </li>
             <li>
               <a href="#">
-                <span class="fa fa-history dnl-link-icon"></span>
-                <span class="dnl-link-text">Annual</span>
+                <span class="fa fa-files-o dnl-link-icon"></span>
+                <span class="dnl-link-text">Project 2</span>
+              </a>
+            </li>
+			<li>
+              <a href="#">
+                <span class="fa fa-files-o dnl-link-icon"></span>
+                <span class="dnl-link-text">Project 3</span>
+              </a>
+            </li>
+			<li>
+              <a href="#">
+                <span class="fa fa-files-o dnl-link-icon"></span>
+                <span class="dnl-link-text">Project 4</span>
+              </a>
+            </li>
+			<li>
+              <a href="#">
+                <span class="fa fa-files-o dnl-link-icon"></span>
+                <span class="dnl-link-text">Project 5</span>
+              </a>
+            </li>
+			<li>
+              <a href="#">
+                <span class="fa fa-files-o dnl-link-icon"></span>
+                <span class="dnl-link-text">Project 6</span>
               </a>
             </li>
           </ul>
         </li>
         <li>
           <a href="#">
-            <span class="glyphicon glyphicon-folder-open dnl-link-icon"></span>
-            <span class="dnl-link-text">Pages</span>
+            <span class="fa fa-graduation-cap dnl-link-icon"></span>
+            <span class="dnl-link-text">Education</span>
           </a>
         </li>
         <li>
           <a href="#">
-            <span class="glyphicon glyphicon-comment dnl-link-icon"></span>
-            <span class="dnl-link-text">Comments</span>
-            <span class="badge">4</span>
+            <span class="fa fa-laptop dnl-link-icon"></span>
+            <span class="dnl-link-text">Work</span>
+            <!--<span class="badge">4</span>-->
           </a>
         </li>
-        <li>
+		<li>
+          <a href="#">
+            <span class="glyphicon glyphicon-map-marker dnl-link-icon"></span>
+            <span class="dnl-link-text">Locations</span>
+          </a>
+        </li>
+      </ul>
+      <p class="dnl-nav-title">Filter</p>
+      <ul class="dnl-nav">
+	    <li>
           <a class="collapsed" data-toggle="collapse" href="#collapseLevelOne" aria-expanded="false" aria-controls="collapseLevelOne">
             <span class="fa fa-sort-amount-desc dnl-link-icon"></span>
             <span class="dnl-link-text">Dropdown level 1</span>
@@ -210,9 +250,6 @@
             </li>
           </ul>
         </li>
-      </ul>
-      <p class="dnl-nav-title">Filter</p>
-      <ul class="dnl-nav">
         <li>
           <a href="#">
             <span class="fa fa-image dnl-link-icon"></span>

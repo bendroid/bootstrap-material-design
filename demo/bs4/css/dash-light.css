@@ -29,7 +29,7 @@ html {
 .dash-navbar-top .dnl-btn-toggle {
   position: absolute;
   left: 16px;
-  top: 13.5px;
+  top: 17.5px;
   font-size: 21px;
   background-color: rgba(0, 0, 0, 0);
   border-width: 0;
@@ -72,7 +72,7 @@ html {
     padding-left: 5px;
   }
 }
-*/
+
 .dash-navbar-top .navbar-toggle {
   border-width: 0;
   font-size: 24px;
@@ -89,7 +89,7 @@ html {
   text-align: center;
 }
 
-/*
+
 .dash-navbar-top .navbar-nav > li > a {
   color: #d1e3f0;
   padding-top: 20px;
@@ -203,7 +203,7 @@ html {
     display: none;
   }
 }
-*/
+
 
 .dash-navbar-top .navbar-nav.navbar-right.navbar-avatar .dropdown-menu:before {
   right: 29px;
