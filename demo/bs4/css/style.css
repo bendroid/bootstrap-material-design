@@ -155,7 +155,7 @@ body {
 .sidebar {
   position: relative;
   display: block;
-  min-height: 100%;
+  min-height: 10%;
   overflow-y: auto;
   overflow-x: hidden;
   border: none;
