@@ -17,15 +17,18 @@ html {
 }
 /* Dash Navbar Top = dnt
 / -------------------------------------------------- */
+
+
 .dash-navbar-top {
-  background-color: #4b8fc4;
   margin-bottom: 0;
   min-height: 61px;
 }
+
+
 .dash-navbar-top .dnl-btn-toggle {
   position: absolute;
   left: 16px;
-  top: 13.5px;
+  top: 21.5px;
   font-size: 21px;
   background-color: rgba(0, 0, 0, 0);
   border-width: 0;
@@ -68,6 +71,7 @@ html {
     padding-left: 5px;
   }
 }
+
 .dash-navbar-top .navbar-toggle {
   border-width: 0;
   font-size: 24px;
@@ -83,6 +87,8 @@ html {
 .dash-navbar-top .navbar-nav {
   text-align: center;
 }
+
+
 .dash-navbar-top .navbar-nav > li > a {
   color: #d1e3f0;
   padding-top: 20px;
@@ -196,6 +202,8 @@ html {
     display: none;
   }
 }
+
+
 .dash-navbar-top .navbar-nav.navbar-right.navbar-avatar .dropdown-menu:before {
   right: 29px;
   left: auto;
@@ -212,6 +220,8 @@ html {
   right: 11px;
   left: auto;
 }
+
+
 .dash-navbar-top .dnt-navbar-form {
   position: relative;
   margin-top: 14px;
@@ -225,6 +235,7 @@ html {
   box-shadow: 0 0 0, 0 0 0, inset 0 0 2px #333333;
   border-color: #4b8fc4;
 }
+
 .dash-navbar-top .dnt-navbar-form .btn {
   position: absolute;
   background-color: transparent;
@@ -236,11 +247,13 @@ html {
   -webkit-box-shadow: 0 0 0;
   box-shadow: 0 0 0;
 }
+
 @media (max-width: 767px) {
   .dash-navbar-top .dnt-navbar-form .btn {
     top: 10px;
   }
 }
+
 .dash-navbar-top .dnt-avatar {
   border-radius: 50px;
   width: 35px;
@@ -255,8 +268,8 @@ html {
 .dash-navbar-left {
   position: absolute;
   background-color: #eff0f1;
-  width: 250px;
-  top: 61px;
+  width: 280px;
+  top: 69px;
   bottom: 0;
   overflow-y: auto;
   z-index: 999;
@@ -267,14 +280,14 @@ html {
 }
 @media (max-width: 767px) {
   .dash-navbar-left.dnl-visible {
-    left: -250px;
+    left: -280px;
   }
   .dash-navbar-left.dnl-visible.dnl-show {
     left: 0;
   }
 }
 .dash-navbar-left.dnl-hidden {
-  left: -250px;
+  left: -280px;
 }
 .dash-navbar-left.dnl-hidden.dnl-show {
   left: 0;
@@ -407,7 +420,7 @@ html {
   position: relative;
 }
 .content-wrap.dnl-visible {
-  margin-left: 250px;
+  margin-left: 280px;
 }
 @media (max-width: 767px) {
   .content-wrap.dnl-visible {
