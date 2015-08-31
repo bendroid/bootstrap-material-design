@@ -10,6 +10,7 @@
 // Sidebar toggle
 //
 // -------------------
+
 $(document).ready(function() {
     var overlay = $('.sidebar-overlay');
 
@@ -30,9 +31,13 @@ $(document).ready(function() {
 
 });
 
+
+
+
 // Sidebar constructor
 //
 // -------------------
+
 $(document).ready(function() {
 
     var sidebar = $('#sidebar');
@@ -83,6 +88,7 @@ $(document).ready(function() {
     });
 });
 
+
 /**
  * Created by Kupletsky Sergey on 08.09.14.
  *
@@ -94,12 +100,12 @@ $(document).ready(function() {
 
     // Add slidedown animation to dropdown
     dropdown.on('show.bs.dropdown', function(e){
-        $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
+        $(this).find('.side.dropdown-menu').first().stop(true, true).slideDown();
     });
 
     // Add slideup animation to dropdown
     dropdown.on('hide.bs.dropdown', function(e){
-        $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
+        $(this).find('.side.dropdown-menu').first().stop(true, true).slideUp();
     });
 })(jQuery);
 
@@ -129,3 +135,4 @@ $(document).ready(function() {
 	}
 
 })(jQuery.fn.removeClass);
+
