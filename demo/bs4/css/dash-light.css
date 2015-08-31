@@ -412,6 +412,7 @@ html {
 / -------------------------------------------------- */
 .content-wrap {
   position: relative;
+  top: 55px;
 }
 .content-wrap.dnl-visible {
   margin-left: 280px;
