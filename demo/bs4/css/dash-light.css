@@ -20,7 +20,7 @@ html {
 .dash-navbar-top {
   /*background-color: #4b8fc4;*/
   margin-bottom: 0;
-  min-height: 61px;
+  height: 71px;
 }
 .dash-navbar-top .dnl-btn-toggle {
   position: absolute;
@@ -263,7 +263,7 @@ html {
   position: absolute;
   background-color: #eff0f1;
   width: 280px;
-  top: 69px;
+  top: 50px;
   bottom: 0;
   overflow-y: auto;
   z-index: 999;
