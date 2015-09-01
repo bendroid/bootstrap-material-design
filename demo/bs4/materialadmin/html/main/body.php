@@ -30,7 +30,7 @@
 
 		<!-- BEGIN CONTENT-->
 			<div id="content">
-
+<?php include 'test.php';?>
 				<!-- BEGIN BLANK SECTION -->
 				<section>
 					<div class="section-header">
