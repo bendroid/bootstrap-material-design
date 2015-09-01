@@ -26,9 +26,12 @@
 	</head>
 	<body class="menubar-hoverable header-fixed menubar-pin ">
 
-		<?php include 'test.php';?>
+		
 
-		<!-- BEGIN BLANK SECTION -->
+		<!-- BEGIN CONTENT-->
+			<div id="content">
+
+				<!-- BEGIN BLANK SECTION -->
 				<section>
 					<div class="section-header">
 						<ol class="breadcrumb">
@@ -70,6 +73,8 @@
 				
 			</div><!--end #content-->
 			<!-- END CONTENT -->
+				
+
 
 		<!-- BEGIN JAVASCRIPT -->
 		<script src="../../assets/js/libs/jquery/jquery-1.11.2.min.js"></script>
