@@ -157,6 +157,13 @@
 				</section>
 
 				<!-- BEGIN BLANK SECTION -->
+				<?php include("accordions.php");?>
+				
+				
+				
+				<!-- BEGIN BLANK SECTION -->
+				
+				
 				
 			</div><!--end #content-->
 			<!-- END CONTENT -->
