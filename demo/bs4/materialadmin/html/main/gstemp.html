@@ -1,0 +1,630 @@
+<html lang="en"><head>
+		<title>Material Admin - Getting started</title>
+		
+		<!-- BEGIN META -->
+		<meta charset="utf-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="keywords" content="your,keywords">
+		<meta name="description" content="Short explanation about this website">
+		<!-- END META -->
+
+		<!-- BEGIN STYLESHEETS -->
+				<link href="http://fonts.googleapis.com/css?family=Roboto:300italic,400italic,300,400,500,700,900" rel="stylesheet" type="text/css">
+			<link type="text/css" rel="stylesheet" href="../assets/css/theme-default/bootstrap.css?1422792965">
+
+			<link type="text/css" rel="stylesheet" href="../assets/css/theme-default/materialadmin.css?1425466319">
+
+			<link type="text/css" rel="stylesheet" href="../assets/css/theme-default/font-awesome.min.css?1422529194">
+
+			<link type="text/css" rel="stylesheet" href="../assets/css/theme-default/material-design-iconic-font.min.css?1421434286">
+
+	
+		<!-- END STYLESHEETS -->
+
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+	<script type="text/javascript" src="../assets/js/libs/utils/html5shiv.js?1403934957"></script>
+	<script type="text/javascript" src="../assets/js/libs/utils/respond.min.js?1403934956"></script>
+    <![endif]-->
+	<style type="text/css"></style><link rel="stylesheet" type="text/css" href="https://google-code-prettify.googlecode.com/svn/loader/prettify.css"></head>
+
+	
+				
+				
+	
+
+	<body class="menubar-hoverable menubar-first menubar-pin">
+		<!-- BEGIN HEADER-->
+	<header id="header">
+					
+
+
+<div class="headerbar">
+	<div class="headerbar-right small-padding">
+		<img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKoAAAAoCAYAAABuDmFRAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MjM3M0JFMDJENzY4MTFFM0FENTE4RTlENzAzNDA1N0IiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MjM3M0JFMDNENzY4MTFFM0FENTE4RTlENzAzNDA1N0IiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoyMzczQkUwMEQ3NjgxMUUzQUQ1MThFOUQ3MDM0MDU3QiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoyMzczQkUwMUQ3NjgxMUUzQUQ1MThFOUQ3MDM0MDU3QiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PtwGlEYAABUXSURBVHja7F15fBRV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">
+	</div>
+</div>
+			</header>
+	<!-- END HEADER-->
+
+	<!-- BEGIN BASE-->
+	<div id="base">
+		<!-- BEGIN CONTENT-->
+		<div id="content">
+			
+<!-- BEGIN INTRO SECTION -->
+<section class="style-gray-bright clearfix">
+	
+	<div class="section-body contain-lg">
+
+		<!-- BEGIN INTRO -->
+		<div class="doc-section doc-lead">
+			<h1 id="intro" class="text-xxxl text-default-bright">Getting started</h1>
+			<p class="lead">
+				Thank you for purchasing Material Admin. 
+				If you have any questions that are beyond the scope of this help file, please leave a comment in the forum and we will respond as soon as possible. 
+			</p>
+		</div>
+		<!-- END INTRO -->
+		
+	</div>
+</section>
+<!-- END INTRO SECTION -->
+
+<!-- BEGIN GETTING STARTED SECTION -->
+<section>
+	<div class="section-body contain-lg">
+		
+		<!-- BEGIN GENERAL STRUCTURE -->
+<div class="doc-section">
+	
+	<h1 id="general-stucture" class="page-header">General Structure</h1>
+	<p class="lead">
+		The Material Admin Template has been built upon the Bootstrap framework.
+		So everything you find in Bootstrap, you find in Material Admin... and more.
+		Material Admin also included a lot of external javascript libraries which are optional to include in your project.
+	</p>
+	
+	
+	<h3 id="general-html">HTML</h3>
+	<p>
+		Material Admin requires a few CSS and Javascript imports.
+		Copy the code below to get you started on your project. 
+	</p>
+	<pre class="prettyprint prettyprinted"><span class="tag">&lt;html</span><span class="pln"> </span><span class="atn">lang</span><span class="pun">=</span><span class="atv">"en"</span><span class="tag">&gt;</span><span class="pln">
+	</span><span class="tag">&lt;head&gt;</span><span class="pln">
+		</span><span class="tag">&lt;title&gt;</span><span class="pln">Material Admin</span><span class="tag">&lt;/title&gt;</span><span class="pln">
+
+		</span><span class="com">&lt;!-- BEGIN META --&gt;</span><span class="pln">
+		</span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">charset</span><span class="pun">=</span><span class="atv">"utf-8"</span><span class="tag">&gt;</span><span class="pln">
+		</span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">http-equiv</span><span class="pun">=</span><span class="atv">"X-UA-Compatible"</span><span class="pln"> </span><span class="atn">content</span><span class="pun">=</span><span class="atv">"IE=edge"</span><span class="tag">&gt;</span><span class="pln">
+		</span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"viewport"</span><span class="pln"> </span><span class="atn">content</span><span class="pun">=</span><span class="atv">"width=device-width, initial-scale=1.0"</span><span class="tag">&gt;</span><span class="pln">
+		</span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"keywords"</span><span class="pln"> </span><span class="atn">content</span><span class="pun">=</span><span class="atv">"your,keywords"</span><span class="tag">&gt;</span><span class="pln">
+		</span><span class="tag">&lt;meta</span><span class="pln"> </span><span class="atn">name</span><span class="pun">=</span><span class="atv">"description"</span><span class="pln"> </span><span class="atn">content</span><span class="pun">=</span><span class="atv">"Short explanation about this website"</span><span class="tag">&gt;</span><span class="pln">
+
+		</span><span class="com">&lt;!-- BEGIN STYLESHEETS --&gt;</span><span class="pln">
+		</span><span class="tag">&lt;link</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">'http://fonts.googleapis.com/css?family=Open+Sans:400italic,300,400,600,700,800'</span><span class="pln"> </span><span class="atn">rel</span><span class="pun">=</span><span class="atv">'stylesheet'</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">'text/css'</span><span class="tag">/&gt;</span><span class="pln">
+		</span><span class="tag">&lt;link</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/css"</span><span class="pln"> </span><span class="atn">rel</span><span class="pun">=</span><span class="atv">"stylesheet"</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"/assets/css/theme-default/bootstrap.css"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+		</span><span class="tag">&lt;link</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/css"</span><span class="pln"> </span><span class="atn">rel</span><span class="pun">=</span><span class="atv">"stylesheet"</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"/assets/css/theme-default/materialadmin.css"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+		</span><span class="tag">&lt;link</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/css"</span><span class="pln"> </span><span class="atn">rel</span><span class="pun">=</span><span class="atv">"stylesheet"</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"/assets/css/theme-default/font-awesome.min.css"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"> </span><span class="com">&lt;!--Font Awesome Icon Font--&gt;</span><span class="pln">
+		</span><span class="tag">&lt;link</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/css"</span><span class="pln"> </span><span class="atn">rel</span><span class="pun">=</span><span class="atv">"stylesheet"</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"/assets/css/theme-default/material-design-iconic-font.min.css"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln"> </span><span class="com">&lt;!--Material Design Iconic Font--&gt;</span><span class="pln">
+		</span><span class="com">&lt;!-- Additional CSS includes --&gt;</span><span class="pln">
+		
+		</span><span class="com">&lt;!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries --&gt;</span><span class="pln">
+		</span><span class="com">&lt;!--[if lt IE 9]&gt;
+		&lt;script type="text/javascript" src="/assets/js/libs/utils/html5shiv.js"&gt;&lt;/script&gt;
+		&lt;script type="text/javascript" src="/assets/js/libs/utils/respond.min.js"&gt;&lt;/script&gt;
+		&lt;![endif]--&gt;</span><span class="pln">
+	</span><span class="tag">&lt;/head&gt;</span><span class="pln">
+	</span><span class="tag">&lt;body&gt;</span><span class="pln">
+		~ BODY content goes here ~
+
+		</span><span class="com">&lt;!-- BEGIN JAVASCRIPT --&gt;</span><span class="pln">
+		</span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"/assets/js/libs/jquery/jquery-1.11.2.min.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln">
+		</span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"/assets/js/libs/jquery/jquery-migrate-1.2.1.min.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln">
+		</span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"/assets/js/libs/bootstrap/bootstrap.min.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln">
+		</span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"/assets/js/libs/nanoscroller/jquery.nanoscroller.min.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln">
+		
+		</span><span class="com">&lt;!-- Put App.js last in your javascript imports --&gt;</span><span class="pln">
+		</span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"/assets/js/core/source/App.min.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln">
+	</span><span class="tag">&lt;/body&gt;</span><span class="pln">
+</span><span class="tag">&lt;/html&gt;</span></pre>
+	
+		
+	<h3 id="general-body">Body</h3>
+	<p>
+		Material Admin has a fluid layout with a main navigation, header and an off-canvas on the left and right.
+		Every html element is located in the <code>#base</code> tag, except for the <code>&lt;header&gt;</code>.<br>
+		The <code>#base</code> elements shoud be placed in the following sequence.
+	</p>
+	<ol>
+		<li><code>.offcanvas</code></li>
+		<li><code>#content</code></li>
+		<li><code>#menubar</code></li>
+		<li><code>.offcanvas</code></li>
+	</ol>
+	<p>
+		The general template structure is the same throughout the template. 
+		Here is the general structure.
+	</p>
+	<pre class="prettyprint prettyprinted"><span class="tag">&lt;body&gt;</span><span class="pln">
+	</span><span class="tag">&lt;header</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"header"</span><span class="tag">&gt;</span><span class="pln">
+		~ Header content goes here ~
+	</span><span class="tag">&lt;/header&gt;</span><span class="pln">
+	</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"base"</span><span class="tag">&gt;</span><span class="pln">
+		</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"offcanvas"</span><span class="tag">&gt;</span><span class="pln">
+			~ Left off-canvas content goes here ~
+		</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+		</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"content"</span><span class="tag">&gt;</span><span class="pln">
+			~ Main content goes here ~
+		</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+		</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"menubar"</span><span class="tag">&gt;</span><span class="pln">
+			~ Menubar content goes here ~
+		</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+		</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"offcanvas"</span><span class="tag">&gt;</span><span class="pln">
+			~ Right off-canvas content goes here ~
+		</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+	</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+</span><span class="tag">&lt;/body&gt;</span></pre>
+	
+	</div>
+<!-- END GENERAL STRUCTURE -->
+		<!-- BEGIN MENUBAR STRUCTURE -->
+<div class="doc-section">
+	
+	<h1 id="menubar-stucture" class="page-header">Menubar structure</h1>
+	<p class="lead">
+		The menubar contains the logo and the main menu.
+	</p>
+	
+	
+	<h3 id="menubar-panels">Fixed and scroll panel</h3>
+	<p>
+		The <code>#menubar</code> has two main panels, <code>.menubar-fixed-panel</code> and <code>.menubar-scroll-panel</code>.<br>
+		The <code>.menubar-fixed-panel</code> contains a <code>.expanded</code>.
+		Content inside this element will only be visible when the menu is expanded.<br>
+		The <code>.menubar-scroll-panel</code> can be used to display your main navigation and a menubar footer.
+		Place your footer content inside a <code>&lt;div&gt;</code> with the class <code>.menubar-foot-panel</code>.
+	</p>
+	<div class="alert alert-callout alert-info">
+		The <code>.menubar-fixed-panel</code> is only visible when you have the class <code>.menubar-first</code> placed on your <code>&lt;body&gt;</code>.
+	</div>
+	<pre class="prettyprint prettyprinted"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"menubar"</span><span class="tag">&gt;</span><span class="pln">
+	</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"menubar-fixed-panel"</span><span class="tag">&gt;</span><span class="pln">
+		</span><span class="tag">&lt;div&gt;</span><span class="pln">
+			~ Content that is always visible goes here ~
+		</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+		</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"expanded"</span><span class="tag">&gt;</span><span class="pln">
+			~ Your logo when the menu is expanded goes here ~
+		</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+	</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+	</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"menubar-scroll-panel"</span><span class="tag">&gt;</span><span class="pln">
+		</span><span class="tag">&lt;ul</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"main-menu"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"gui-controls"</span><span class="tag">&gt;</span><span class="pln">
+			~ Main navigation goes here ~
+		</span><span class="tag">&lt;/ul&gt;</span><span class="pln">
+		</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"menubar-foot-panel"</span><span class="tag">&gt;</span><span class="pln">
+			~ Footer content goes here ~
+		</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+	</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+</span><span class="tag">&lt;/div&gt;</span></pre>
+	
+		
+	<h3 id="menubar-menu-basic">Basic main menu</h3>
+	<p>
+		The menubar content contains the main menu.
+		Add for every link a <code>&lt;li&gt;</code> tag with an <code>&lt;a&gt;</code> tag inside.
+		Every root link can hold an icon. Add the icon inside a <code>&lt;div&gt;</code> tag with the class <code>gui-icon</code>.
+		You can add the title inside a <code>&lt;span&gt;</code> with the class <code>.title</code>.
+	</p>
+	<pre class="prettyprint prettyprinted"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"menubar-scroll-panel"</span><span class="tag">&gt;</span><span class="pln">
+	</span><span class="tag">&lt;ul</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"main-menu"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"gui-controls gui-controls-tree"</span><span class="tag">&gt;</span><span class="pln">
+		</span><span class="tag">&lt;li&gt;&lt;small&gt;</span><span class="pln">DIVIDER</span><span class="tag">&lt;/small&gt;&lt;/li&gt;</span><span class="pln">
+		</span><span class="tag">&lt;li&gt;</span><span class="pln">
+			</span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"active"</span><span class="tag">&gt;</span><span class="pln">
+				</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"gui-icon"</span><span class="tag">&gt;&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"fa fa-home"</span><span class="tag">&gt;&lt;/i&gt;&lt;/div&gt;</span><span class="pln">
+				</span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"title"</span><span class="tag">&gt;</span><span class="pln">Home</span><span class="tag">&lt;/span&gt;</span><span class="pln">
+			</span><span class="tag">&lt;/a&gt;</span><span class="pln">
+		</span><span class="tag">&lt;/li&gt;</span><span class="pln">
+		</span><span class="tag">&lt;li&gt;</span><span class="pln">
+			</span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="tag">&gt;</span><span class="pln">
+				</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"gui-icon"</span><span class="tag">&gt;&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"fa fa-dashboard"</span><span class="tag">&gt;&lt;/i&gt;&lt;/div&gt;</span><span class="pln">
+				</span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"title"</span><span class="tag">&gt;</span><span class="pln">Dashboard</span><span class="tag">&lt;/span&gt;</span><span class="pln">
+			</span><span class="tag">&lt;/a&gt;</span><span class="pln">
+		</span><span class="tag">&lt;/li&gt;</span><span class="pln">
+		...
+	</span><span class="tag">&lt;/ul&gt;</span><span class="pln">
+</span><span class="tag">&lt;/div&gt;</span></pre>
+	
+		
+	<h3 id="menubar-submenu">Submenus</h3>
+	<p>
+		Every main menu item can contain a submenu. 
+		Visually Material Admin will indent the submenus and add tree lines up to 5 levels deep.
+	</p>
+	<p>
+		To add an extra submenu, simply add an <code>&lt;ul&gt;</code> list to a <code>li.gui-folder</code> item.
+		You can see this in the example below.
+	</p>
+	<pre class="prettyprint prettyprinted"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"menubar-scroll-panel"</span><span class="tag">&gt;</span><span class="pln">
+	</span><span class="tag">&lt;ul</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"main-menu"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"gui-controls gui-controls-tree"</span><span class="tag">&gt;</span><span class="pln">
+		...
+		</span><span class="tag">&lt;li</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"gui-folder"</span><span class="tag">&gt;</span><span class="pln">
+			</span><span class="tag">&lt;a&gt;</span><span class="pln">
+				</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"gui-icon"</span><span class="tag">&gt;&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"md md-email"</span><span class="tag">&gt;&lt;/i&gt;&lt;/div&gt;</span><span class="pln">
+				</span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"title"</span><span class="tag">&gt;</span><span class="pln">Level 1</span><span class="tag">&lt;/span&gt;</span><span class="pln">
+			</span><span class="tag">&lt;/a&gt;</span><span class="pln">
+			</span><span class="tag">&lt;ul&gt;</span><span class="pln">
+				</span><span class="tag">&lt;li&gt;&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="tag">&gt;&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"title"</span><span class="tag">&gt;</span><span class="pln">Item 1.1</span><span class="tag">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span><span class="pln">
+				</span><span class="tag">&lt;li&gt;&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="tag">&gt;&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"title"</span><span class="tag">&gt;</span><span class="pln">Item 1.2</span><span class="tag">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span><span class="pln">
+				</span><span class="tag">&lt;li</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"gui-folder"</span><span class="tag">&gt;</span><span class="pln">
+					</span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"javascript:void(0);"</span><span class="tag">&gt;&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"title"</span><span class="tag">&gt;</span><span class="pln">Level 2</span><span class="tag">&lt;/span&gt;&lt;/a&gt;</span><span class="pln">
+					</span><span class="tag">&lt;ul&gt;</span><span class="pln">
+						</span><span class="tag">&lt;li&gt;&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="tag">&gt;&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"title"</span><span class="tag">&gt;</span><span class="pln">Item 2.1</span><span class="tag">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span><span class="pln">
+						...
+					</span><span class="tag">&lt;/ul&gt;</span><span class="pln">
+				</span><span class="tag">&lt;/li&gt;</span><span class="pln">
+				...
+			</span><span class="tag">&lt;/ul&gt;</span><span class="pln">
+		</span><span class="tag">&lt;/li&gt;</span><span class="pln">
+		...
+	</span><span class="tag">&lt;/ul&gt;</span><span class="pln">
+</span><span class="tag">&lt;/div&gt;</span></pre>
+	
+	</div>
+<!-- END MENUBAR STRUCTURE -->
+		<!-- BEGIN HEADER STRUCTURE -->
+<div class="doc-section">
+	
+	<h1 id="header-stucture" class="page-header">Header structure</h1>
+	<p class="lead">
+		The header can contain buttons, dropdown menus and logos. View the code below to get started. 
+	</p>
+	
+	<pre class="prettyprint prettyprinted"><span class="tag">&lt;header</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"header"</span><span class="pln"> </span><span class="tag">&gt;</span><span class="pln">
+	</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"headerbar"</span><span class="tag">&gt;</span><span class="pln">
+		</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"headerbar-left"</span><span class="tag">&gt;</span><span class="pln">
+			</span><span class="tag">&lt;ul</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"header-nav header-nav-options"</span><span class="tag">&gt;</span><span class="pln">
+				~ Left aligned navigation items ~
+			</span><span class="tag">&lt;/ul&gt;</span><span class="pln">
+		</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+		</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"headerbar-right"</span><span class="tag">&gt;</span><span class="pln">
+			</span><span class="tag">&lt;ul</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"header-nav header-nav-options"</span><span class="tag">&gt;</span><span class="pln">
+				~ Right aligned navigation items ~
+			</span><span class="tag">&lt;/ul&gt;</span><span class="pln">
+			</span><span class="tag">&lt;ul</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"header-nav header-nav-profile"</span><span class="tag">&gt;</span><span class="pln">
+				~ Right aligned profile dropdown menu ~
+			</span><span class="tag">&lt;/ul&gt;</span><span class="pln">
+			</span><span class="tag">&lt;ul</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"header-nav header-nav-toggle"</span><span class="tag">&gt;</span><span class="pln">
+				~ Right aligned toggle items ~
+			</span><span class="tag">&lt;/ul&gt;</span><span class="pln">
+		</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+	</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+</span><span class="tag">&lt;/header&gt;</span></pre>
+	
+	</div>
+<!-- END HEADER STRUCTURE -->
+		<!-- BEGIN HEADER STRUCTURE -->
+<div class="doc-section">
+	
+	<h1 id="offcanvas-stucture" class="page-header">Off-canvas structure</h1>
+	<p class="lead">
+		Create a smooth off-canvas sidebar that slides in and out of the page.
+		The off-canvas component is perfect for adding more functionality without the cost of screen real estate.
+	</p>
+	
+	
+	<h3 id="offcanvas-left">Off-canvas left</h3>
+	<p>
+		To add an off-canvas component on the left side, you have to add it as the first <code>&lt;div&gt;</code> element in the <code>#base</code> tag.<br>
+	</p>
+	<pre class="prettyprint prettyprinted"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"base"</span><span class="tag">&gt;</span><span class="pln">
+	</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"offcanvas"</span><span class="tag">&gt;</span><span class="pln">
+		</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"offcanvas-pane"</span><span class="tag">&gt;</span><span class="pln">
+			~ Offcanvas content ~
+		</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+		</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"offcanvas-pane"</span><span class="tag">&gt;</span><span class="pln">
+			~ Offcanvas content ~
+		</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+	</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+	...
+</span><span class="tag">&lt;/div&gt;</span></pre>
+	
+	
+	<h3 id="offcanvas-right">Off-canvas right</h3>
+	<p>
+		To add an off-canvas component on the right side, you have to add it as the last <code>&lt;div&gt;</code> element in the <code>#base</code> tag.<br>
+	</p>
+	<pre class="prettyprint prettyprinted"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"base"</span><span class="tag">&gt;</span><span class="pln">
+	...
+	</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"offcanvas"</span><span class="tag">&gt;</span><span class="pln">
+		</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"offcanvas-pane"</span><span class="tag">&gt;</span><span class="pln">
+			~ Offcanvas content ~
+		</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+		</span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"offcanvas-pane"</span><span class="tag">&gt;</span><span class="pln">
+			~ Offcanvas content ~
+		</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+	</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+</span><span class="tag">&lt;/div&gt;</span></pre>
+	
+	</div>
+<!-- END HEADER STRUCTURE -->
+		<!-- BEGIN LESS STRUCTURE -->
+<div class="doc-section">
+	
+	<h1 id="less-stucture" class="page-header">Less structure</h1>
+	<p class="lead">
+		Use the .less files to change the look of your project.
+	</p>
+	
+	
+	<h3 id="less-html">HTML</h3>
+	<p>
+		The .less files for Material Admin have the following structure:
+	</p>
+	<pre class="prettyprint prettyprinted"><span class="pln">materialadmin</span><span class="pun">/</span><span class="pln">
+</span><span class="pun">+--</span><span class="pln"> assets</span><span class="pun">/</span><span class="pln">
+    </span><span class="pun">+--</span><span class="pln"> less</span><span class="pun">/</span><span class="pln">
+        </span><span class="pun">+--</span><span class="pln"> bootstrap</span><span class="pun">.</span><span class="pln">less
+        </span><span class="pun">+--</span><span class="pln"> materialadmin</span><span class="pun">.</span><span class="pln">less
+        </span><span class="pun">+--</span><span class="pln"> bootstrap</span><span class="pun">/</span><span class="pln">
+        </span><span class="pun">¦</span><span class="pln">   </span><span class="pun">+--</span><span class="pln"> </span><span class="com">// unmodified bootstrap less files</span><span class="pln">
+        </span><span class="pun">¦</span><span class="pln">   </span><span class="pun">+--</span><span class="pln"> </span><span class="pun">...</span><span class="pln">
+        </span><span class="pun">+--</span><span class="pln"> materialadmin</span><span class="pun">/</span><span class="pln">
+        </span><span class="pun">¦</span><span class="pln">   </span><span class="pun">+--</span><span class="pln"> </span><span class="com">// Material Admin less files</span><span class="pln">
+        </span><span class="pun">¦</span><span class="pln">   </span><span class="pun">+--</span><span class="pln"> </span><span class="pun">...</span><span class="pln">
+        </span><span class="pun">+--</span><span class="pln"> libs</span><span class="pun">/</span><span class="pln">
+        </span><span class="pun">¦</span><span class="pln">   </span><span class="pun">+--</span><span class="pln"> </span><span class="com">// less files for javascript addons</span><span class="pln">
+        </span><span class="pun">¦</span><span class="pln">   </span><span class="pun">+--</span><span class="pln"> </span><span class="pun">...</span><span class="pln">
+        </span><span class="pun">+--</span><span class="pln"> shared</span><span class="pun">/</span><span class="pln">
+            </span><span class="pun">+--</span><span class="pln"> mixins</span><span class="pun">.</span><span class="pln">less
+            </span><span class="pun">+--</span><span class="pln"> mixins</span><span class="pun">/</span><span class="pln">
+            </span><span class="pun">¦</span><span class="pln">   </span><span class="pun">+--</span><span class="pln"> </span><span class="com">// Mixin less files</span><span class="pln">
+            </span><span class="pun">¦</span><span class="pln">   </span><span class="pun">+--</span><span class="pln"> </span><span class="pun">...</span><span class="pln">
+            </span><span class="pun">+--</span><span class="pln"> variables</span><span class="pun">.</span><span class="pln">less
+            </span><span class="pun">+--</span><span class="pln"> themes</span><span class="pun">/</span><span class="pln">
+                </span><span class="pun">+--</span><span class="pln"> theme</span><span class="pun">-</span><span class="lit">1.less</span><span class="pln">
+                </span><span class="pun">+--</span><span class="pln"> theme</span><span class="pun">-</span><span class="lit">2.less</span><span class="pln">
+                </span><span class="pun">+--</span><span class="pln"> theme</span><span class="pun">-</span><span class="lit">3.less</span><span class="pln">
+                </span><span class="pun">+--</span><span class="pln"> theme</span><span class="pun">-</span><span class="lit">4.less</span><span class="pln">
+                </span><span class="pun">+--</span><span class="pln"> theme</span><span class="pun">-</span><span class="lit">5.less</span><span class="pln">
+                </span><span class="pun">+--</span><span class="pln"> theme</span><span class="pun">-</span><span class="kwd">default</span><span class="pun">.</span><span class="pln">less</span></pre>
+	
+	<h4>Basic modifications</h4>
+	<p>
+		If you want to tweak some colors and basic dimensions for your project, you can create a new theme in 2 steps:
+	</p>
+	<ol>
+		<li>Create a new file in the directory <code>/materialadmin/assets/less/shared/themes/</code> called:<code>theme-custom.less</code></li>
+		<li>In the file <code>/materialadmin/assets/less/shared/variables.less</code> change the line at the very bottom from:<br>
+			<code>@import "themes/theme-default.less";</code><br>
+			to<br>
+			<code>@import "themes/theme-custom.less";</code>
+		</li>
+	</ol>
+	<p>
+		Any modification of .less variables should be placed inside <code>theme-custom.less</code>.
+		This file will overwrite any variable located in <code>/materialadmin/assets/less/shared/variables.less</code> and <code>/materialadmin/assets/less/bootstrap/variables.less</code>
+	</p>
+	
+	
+	<h4>Extensive modifications</h4>
+	<p>
+		Material Admin has kept the Bootstrap .less files original.
+		This way you can update Bootstrap easily.
+		Therefore it's recommended not to change the files located in <code>/materialadmin/assets/less/bootstrap/</code>.<br>
+		The documentation has green outlined cards which indicates the location of the .less files for that particular component.
+		These files overwrite the Bootstrap components in some cases.
+		Extensive modifications can be applied in these .less files.
+		
+		
+		
+			</p>
+	
+		
+	<h3 id="less-compile">Compile</h3>
+	<p>
+		If you modify the .less files, you should remember to compile the .less files to CSS.
+		The .less files that should be compiled to CSS are the files directly in the directory <code>/materialadmin/assets</code> and every .less file located in the subdirectories of <code>/materialadmin/assets/libs</code>.
+	</p>
+	
+	</div>
+<!-- END LESS STRUCTURE -->
+		<!-- BEGIN LESS STRUCTURE -->
+<div class="doc-section">
+	
+	<h1 id="credits-stucture" class="page-header">Credits</h1>
+	<p class="lead">
+		Material Admin uses the following images, .less files and javascript files as listed:
+	</p>
+	
+	<pre class="prettyprint prettyprinted"><span class="pln">materialadmin</span><span class="pun">/</span><span class="pln">
+</span><span class="pun">+--</span><span class="pln"> assets</span><span class="pun">/</span><span class="pln">
+</span><span class="pun">¦</span><span class="pln">   </span><span class="pun">+--</span><span class="pln"> less</span><span class="pun">/</span><span class="pln">
+</span><span class="pun">¦</span><span class="pln">       </span><span class="pun">+--</span><span class="pln"> bootstrap</span><span class="pun">.</span><span class="pln">less </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Twitter</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Inc</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">¦</span><span class="pln">       </span><span class="pun">+--</span><span class="pln"> bootstrap</span><span class="pun">/</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Twitter</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Inc</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">+--</span><span class="pln"> img</span><span class="pun">/</span><span class="pln">
+</span><span class="pun">¦</span><span class="pln">   </span><span class="pun">+--</span><span class="pln"> img1</span><span class="pun">.</span><span class="pln">jpg </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Pixabay</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">¦</span><span class="pln">   </span><span class="pun">+--</span><span class="pln"> img2</span><span class="pun">.</span><span class="pln">jpg </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Pixabay</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">¦</span><span class="pln">   </span><span class="pun">+--</span><span class="pln"> img3</span><span class="pun">.</span><span class="pln">jpg </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Envato</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">¦</span><span class="pln">   </span><span class="pun">+--</span><span class="pln"> img4</span><span class="pun">.</span><span class="pln">jpg </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Pixabay</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">¦</span><span class="pln">   </span><span class="pun">+--</span><span class="pln"> img5</span><span class="pun">.</span><span class="pln">jpg </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Pixabay</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">¦</span><span class="pln">   </span><span class="pun">+--</span><span class="pln"> img6</span><span class="pun">.</span><span class="pln">jpg </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Pixabay</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">¦</span><span class="pln">   </span><span class="pun">+--</span><span class="pln"> img7</span><span class="pun">.</span><span class="pln">jpg </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Pixabay</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">¦</span><span class="pln">   </span><span class="pun">+--</span><span class="pln"> img8</span><span class="pun">.</span><span class="pln">jpg </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Photodune</span><span class="pun">,</span><span class="pln"> link</span><span class="pun">:</span><span class="pln"> </span><span class="str">'http://photodune.net/item/facial-portrait-of-an-attractive-adult-man/6364232'</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+</span><span class="pun">¦</span><span class="pln">   </span><span class="pun">+--</span><span class="pln"> img9</span><span class="pun">.</span><span class="pln">jpg </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Pixabay</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">¦</span><span class="pln">   </span><span class="pun">+--</span><span class="pln"> img10</span><span class="pun">.</span><span class="pln">jpg </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Pixabay</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">¦</span><span class="pln">   </span><span class="pun">+--</span><span class="pln"> img11</span><span class="pun">.</span><span class="pln">jpg </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Pixabay</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">¦</span><span class="pln">   </span><span class="pun">+--</span><span class="pln"> img12</span><span class="pun">.</span><span class="pln">jpg </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Pixabay</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">¦</span><span class="pln">   </span><span class="pun">+--</span><span class="pln"> img13</span><span class="pun">.</span><span class="pln">jpg </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Pixabay</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">¦</span><span class="pln">   </span><span class="pun">+--</span><span class="pln"> img14</span><span class="pun">.</span><span class="pln">jpg </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Pixabay</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">¦</span><span class="pln">   </span><span class="pun">+--</span><span class="pln"> img15</span><span class="pun">.</span><span class="pln">jpg </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Pixabay</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">¦</span><span class="pln">   </span><span class="pun">+--</span><span class="pln"> img16</span><span class="pun">.</span><span class="pln">jpg </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Pixabay</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">¦</span><span class="pln">   </span><span class="pun">+--</span><span class="pln"> avatar1</span><span class="pun">.</span><span class="pln">jpg </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Photodune</span><span class="pun">,</span><span class="pln"> link</span><span class="pun">:</span><span class="pln"> </span><span class="str">'http://photodune.net/item/facial-portrait-of-an-attractive-adult-man/6364232'</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+</span><span class="pun">¦</span><span class="pln">   </span><span class="pun">+--</span><span class="pln"> avatar2</span><span class="pun">.</span><span class="pln">jpg </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Photodune</span><span class="pun">,</span><span class="pln"> link</span><span class="pun">:</span><span class="pln"> </span><span class="str">'http://photodune.net/item/portraits/6904608'</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+</span><span class="pun">¦</span><span class="pln">   </span><span class="pun">+--</span><span class="pln"> avatar3</span><span class="pun">.</span><span class="pln">jpg </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Photodune</span><span class="pun">,</span><span class="pln"> link</span><span class="pun">:</span><span class="pln"> </span><span class="str">'http://photodune.net/item/smiling-portraits/4276142'</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+</span><span class="pun">¦</span><span class="pln">   </span><span class="pun">+--</span><span class="pln"> avatar4</span><span class="pun">.</span><span class="pln">jpg </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Photodune</span><span class="pun">,</span><span class="pln"> link</span><span class="pun">:</span><span class="pln"> </span><span class="str">'http://photodune.net/item/smiling-portraits/4276142'</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+</span><span class="pun">¦</span><span class="pln">   </span><span class="pun">+--</span><span class="pln"> avatar5</span><span class="pun">.</span><span class="pln">jpg </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Photodune</span><span class="pun">,</span><span class="pln"> link</span><span class="pun">:</span><span class="pln"> </span><span class="str">'http://photodune.net/item/portraits/6904608'</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+</span><span class="pun">¦</span><span class="pln">   </span><span class="pun">+--</span><span class="pln"> avatar6</span><span class="pun">.</span><span class="pln">jpg </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Photodune</span><span class="pun">,</span><span class="pln"> link</span><span class="pun">:</span><span class="pln"> </span><span class="str">'http://photodune.net/item/smiling-portraits/4276142'</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+</span><span class="pun">¦</span><span class="pln">   </span><span class="pun">+--</span><span class="pln"> avatar7</span><span class="pun">.</span><span class="pln">jpg </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Photodune</span><span class="pun">,</span><span class="pln"> link</span><span class="pun">:</span><span class="pln"> </span><span class="str">'http://photodune.net/item/smiling-portraits/4276142'</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+</span><span class="pun">¦</span><span class="pln">   </span><span class="pun">+--</span><span class="pln"> avatar8</span><span class="pun">.</span><span class="pln">jpg </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Photodune</span><span class="pun">,</span><span class="pln"> link</span><span class="pun">:</span><span class="pln"> </span><span class="str">'http://photodune.net/item/smiling-portraits/4276142'</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+</span><span class="pun">¦</span><span class="pln">   </span><span class="pun">+--</span><span class="pln"> avatar9</span><span class="pun">.</span><span class="pln">jpg </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Photodune</span><span class="pun">,</span><span class="pln"> link</span><span class="pun">:</span><span class="pln"> </span><span class="str">'http://photodune.net/item/smiling-portraits/4276142'</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+</span><span class="pun">¦</span><span class="pln">   </span><span class="pun">+--</span><span class="pln"> avatar10</span><span class="pun">.</span><span class="pln">jpg </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Photodune</span><span class="pun">,</span><span class="pln"> link</span><span class="pun">:</span><span class="pln"> </span><span class="str">'http://photodune.net/item/smiling-portraits/4276142'</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+</span><span class="pun">¦</span><span class="pln">   </span><span class="pun">+--</span><span class="pln"> avatar11</span><span class="pun">.</span><span class="pln">jpg </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Photodune</span><span class="pun">,</span><span class="pln"> link</span><span class="pun">:</span><span class="pln"> </span><span class="str">'http://photodune.net/item/smiling-portraits/4276142'</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+</span><span class="pun">¦</span><span class="pln">   </span><span class="pun">+--</span><span class="pln"> avatar12</span><span class="pun">.</span><span class="pln">jpg </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Photodune</span><span class="pun">,</span><span class="pln"> link</span><span class="pun">:</span><span class="pln"> </span><span class="str">'http://photodune.net/item/smiling-portraits/4276142'</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+</span><span class="pun">¦</span><span class="pln">   </span><span class="pun">+--</span><span class="pln"> avatar13</span><span class="pun">.</span><span class="pln">jpg </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Photodune</span><span class="pun">,</span><span class="pln"> link</span><span class="pun">:</span><span class="pln"> </span><span class="str">'http://photodune.net/item/smiling-portraits/4276142'</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+</span><span class="pun">¦</span><span class="pln">   </span><span class="pun">+--</span><span class="pln"> avatar14</span><span class="pun">.</span><span class="pln">jpg </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Photodune</span><span class="pun">,</span><span class="pln"> link</span><span class="pun">:</span><span class="pln"> </span><span class="str">'http://photodune.net/item/portraits/6904608'</span><span class="pln"> </span><span class="pun">)</span><span class="pln">
+</span><span class="pun">+--</span><span class="pln"> js</span><span class="pun">/</span><span class="pln">
+    </span><span class="pun">+--</span><span class="pln"> libs</span><span class="pun">/</span><span class="pln">
+        </span><span class="pun">+--</span><span class="pln"> autosize</span><span class="pun">/</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Jack</span><span class="pln"> </span><span class="typ">Moore</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">+--</span><span class="pln"> blueimp</span><span class="pun">-</span><span class="pln">file</span><span class="pun">-</span><span class="pln">upload</span><span class="pun">/</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Sebastian</span><span class="pln"> </span><span class="typ">Tschan</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">+--</span><span class="pln"> bootstrap</span><span class="pun">/</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Twitter</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Inc</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">+--</span><span class="pln"> bootstrap</span><span class="pun">-</span><span class="pln">colorpicker</span><span class="pun">/</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Stefan</span><span class="pln"> </span><span class="typ">Petre</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">+--</span><span class="pln"> bootstrap</span><span class="pun">-</span><span class="pln">datepicker</span><span class="pun">/</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> eternicode</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">+--</span><span class="pln"> bootstrap</span><span class="pun">-</span><span class="pln">multiselect</span><span class="pun">/</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">David</span><span class="pln"> </span><span class="typ">Stutz</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">+--</span><span class="pln"> bootstrap</span><span class="pun">-</span><span class="pln">rating</span><span class="pun">/</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Javier</span><span class="pln"> </span><span class="typ">Toledo</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">+--</span><span class="pln"> bootstrap</span><span class="pun">-</span><span class="pln">tagsinput</span><span class="pun">/</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Tim</span><span class="pln"> </span><span class="typ">Schlechter</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">+--</span><span class="pln"> ckeditor</span><span class="pun">/</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">CKEditor</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">+--</span><span class="pln"> d3</span><span class="pun">/</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Michael</span><span class="pln"> </span><span class="typ">Bostock</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">+--</span><span class="pln"> dataTables</span><span class="pun">/</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Allan</span><span class="pln"> </span><span class="typ">Jardine</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">+--</span><span class="pln"> flot</span><span class="pun">/</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> IOLA </span><span class="kwd">and</span><span class="pln"> </span><span class="typ">Ole</span><span class="pln"> </span><span class="typ">Laursen</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">+--</span><span class="pln"> fullcalendar</span><span class="pun">/</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Adam</span><span class="pln"> </span><span class="typ">Shaw</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">+--</span><span class="pln"> gmaps</span><span class="pun">/</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Gustavo</span><span class="pln"> </span><span class="typ">Leon</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">+--</span><span class="pln"> google</span><span class="pun">-</span><span class="pln">code</span><span class="pun">-</span><span class="pln">prettify</span><span class="pun">/</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Google</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">+--</span><span class="pln"> inputmask</span><span class="pun">/</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Robin</span><span class="pln"> </span><span class="typ">Herbots</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">+--</span><span class="pln"> jquery</span><span class="pun">/</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> jQuery </span><span class="typ">Foundation</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Inc</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">+--</span><span class="pln"> jquery</span><span class="pun">-</span><span class="pln">knob</span><span class="pun">/</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Anthony</span><span class="pln"> </span><span class="typ">Terrien</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">+--</span><span class="pln"> jquery</span><span class="pun">-</span><span class="pln">placeholder</span><span class="pun">/</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Mathias</span><span class="pln"> </span><span class="typ">Bynens</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">+--</span><span class="pln"> jquery</span><span class="pun">-</span><span class="pln">ui</span><span class="pun">/</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> jQuery </span><span class="typ">Foundation</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Inc</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">+--</span><span class="pln"> jquery</span><span class="pun">-</span><span class="pln">validation</span><span class="pun">/</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> J</span><span class="pun">ö</span><span class="pln">rn </span><span class="typ">Zaefferer</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">+--</span><span class="pln"> microtemplating</span><span class="pun">/</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">John</span><span class="pln"> </span><span class="typ">Resig</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">+--</span><span class="pln"> moment</span><span class="pun">/</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Tim</span><span class="pln"> </span><span class="typ">Wood</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Iskren</span><span class="pln"> </span><span class="typ">Chernev</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Moment</span><span class="pun">.</span><span class="pln">js contributors</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">+--</span><span class="pln"> morris</span><span class="pun">.</span><span class="pln">js</span><span class="pun">/</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Olly</span><span class="pln"> </span><span class="typ">Smith</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">+--</span><span class="pln"> multi</span><span class="pun">-</span><span class="kwd">select</span><span class="pun">/</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Sam</span><span class="pln"> </span><span class="typ">Hocevar</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">+--</span><span class="pln"> nestable</span><span class="pun">/</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">David</span><span class="pln"> </span><span class="typ">Bushell</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">+--</span><span class="pln"> raphael</span><span class="pun">/</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Dmitry</span><span class="pln"> </span><span class="typ">Baranovskiy</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">+--</span><span class="pln"> rickshaw</span><span class="pun">/</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Shutterstock</span><span class="pln"> </span><span class="typ">Images</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">+--</span><span class="pln"> select2</span><span class="pun">/</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Igor</span><span class="pln"> </span><span class="typ">Vaynberg</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">+--</span><span class="pln"> skycons</span><span class="pun">/</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">The</span><span class="pln"> </span><span class="typ">Dark</span><span class="pln"> </span><span class="typ">Sky</span><span class="pln"> </span><span class="typ">Company</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">+--</span><span class="pln"> slimscroll</span><span class="pun">/</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Piotr</span><span class="pln"> </span><span class="typ">Rochala</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">+--</span><span class="pln"> sparkline</span><span class="pun">/</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Splunk</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Inc</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">+--</span><span class="pln"> spin</span><span class="pun">.</span><span class="pln">js</span><span class="pun">/</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Felix</span><span class="pln"> </span><span class="typ">Gnass</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">+--</span><span class="pln"> summernote</span><span class="pun">/</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Alan</span><span class="pln"> </span><span class="typ">Hong</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">+--</span><span class="pln"> toastr</span><span class="pun">/</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Hans</span><span class="pln"> </span><span class="typ">Fj</span><span class="pun">ä</span><span class="pln">llemark </span><span class="pun">&amp;</span><span class="pln"> </span><span class="typ">John</span><span class="pln"> </span><span class="typ">Papa</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">+--</span><span class="pln"> typeahead</span><span class="pun">/</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Twitter</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Inc</span><span class="pun">)</span><span class="pln">
+        </span><span class="pun">+--</span><span class="pln"> wizard</span><span class="pun">/</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">from</span><span class="pln"> </span><span class="typ">Vincent</span><span class="pln"> </span><span class="typ">Gabriel</span><span class="pln"> </span><span class="pun">&amp;</span><span class="pln"> </span><span class="typ">Jason</span><span class="pln"> </span><span class="typ">Gill</span><span class="pun">)</span></pre>
+	
+	</div>
+<!-- END LESS STRUCTURE -->
+		
+	</div><!--end .section-body -->
+</section>
+<!-- END GETTING STARTED SECTION -->
+
+		</div><!--end #content-->		
+		<!-- END CONTENT -->
+
+
+		<!-- BEGIN MENUBAR-->
+		<div id="menubar" class="menubar-inverse animate">
+			<div class="menubar-fixed-panel">
+				<div>
+					<a class="btn btn-icon-toggle btn-default menubar-toggle" data-toggle="menubar" href="javascript:void(0);">
+						<i class="fa fa-bars"></i>
+					</a>
+				</div>
+				<div class="brand-holder">
+					<a href="../docs/getting-start.html">
+						<span class="text-lg text-bold text-primary ">MATERIAL&nbsp;ADMIN</span>
+					</a>
+				</div>
+			</div>
+			<div class="nano has-scrollbar" style="height: 871px;"><div class="nano-content" tabindex="0" style="right: -17px;"><div class="menubar-scroll-panel" style="padding-bottom: 1px;">
+				<!-- BEGIN MAIN MENU -->
+				
+
+
+<ul id="main-menu" class="gui-controls gui-controls-tree nav">
+	<!-- Menu Getting started -->
+	<li class="gui-folder expanded active">
+		<a href="../docs/getting-start.html" class="active">
+			<div class="gui-icon"><i class="fa fa-rocket fa-fw"></i></div>
+			<span class="title">Getting started</span>
+		</a>
+		<ul>
+		<li><a href="#intro" class=""><span class="title">Getting started</span></a></li><li class="gui-folder expanded active"><a href="#general-stucture" class="active"><span class="title">General Structure</span></a><ul><li><a href="#general-html"><span class="title">HTML</span></a></li><li><a href="#general-body"><span class="title">Body</span></a></li></ul></li><li class="gui-folder"><a href="#menubar-stucture"><span class="title">Menubar structure</span></a><ul><li><a href="#menubar-panels"><span class="title">Fixed and scroll panel</span></a></li><li><a href="#menubar-menu-basic"><span class="title">Basic main menu</span></a></li><li><a href="#menubar-submenu"><span class="title">Submenus</span></a></li></ul></li><li><a href="#header-stucture"><span class="title">Header structure</span></a></li><li class="gui-folder"><a href="#offcanvas-stucture"><span class="title">Off-canvas structure</span></a><ul><li><a href="#offcanvas-left"><span class="title">Off-canvas left</span></a></li><li><a href="#offcanvas-right"><span class="title">Off-canvas right</span></a></li></ul></li><li class="gui-folder"><a href="#less-stucture"><span class="title">Less structure</span></a><ul><li><a href="#less-html"><span class="title">HTML</span></a></li><li><a href="#less-compile"><span class="title">Compile</span></a></li></ul></li><li><a href="#credits-stucture"><span class="title">Credits</span></a></li></ul>
+	</li>
+	<!-- Menu CSS -->
+	<li class="gui-folder">
+		<a href="../docs/css.html">
+			<div class="gui-icon"><i class="fa fa-flask fa-fw"></i></div>
+			<span class="title">CSS Structure</span>
+		</a>
+		<ul>
+		</ul>
+	</li>
+	<!-- Menu Components -->
+	<li class="gui-folder">
+		<a href="../docs/components.html">
+			<div class="gui-icon"><i class="fa fa-th-large fa-fw"></i></div>
+			<span class="title">Components</span>
+		</a>
+		<ul>
+		</ul>
+	</li>
+	<!-- Menu Javascript -->
+	<li class="gui-folder">
+		<a href="../docs/javascript.html">
+			<div class="gui-icon"><i class="fa fa-code fa-fw"></i></div>
+			<span class="title">Javascript</span>
+		</a>
+		<ul>
+		</ul>
+	</li>
+	<!-- Menu Javascript-forms -->
+	<li class="gui-folder">
+		<a href="../docs/javascript-forms.html">
+			<div class="gui-icon"><i class="fa fa-code fa-fw"></i></div>
+			<span class="title">Javascript for forms</span>
+		</a>
+		<ul>
+		</ul>
+	</li>
+
+</ul><!--end .main-menu -->
+				<!-- END MAIN MENU -->
+			</div></div><div class="nano-pane" style="display: none;"><div class="nano-slider" style="height: 854px; transform: translate(0px, 0px);"></div></div></div>
+		</div><!--end #menubar-->
+		<!-- END MENUBAR -->
+
+	</div><!--end #base-->	
+	<!-- END BASE -->
+
+	<!-- BEGIN JAVASCRIPT -->
+		
+			<script src="../assets/js/libs/jquery/jquery-1.11.2.min.js"></script>
+<script src="../assets/js/libs/jquery/jquery-migrate-1.2.1.min.js"></script>
+<script src="../assets/js/libs/jquery-ui/jquery-ui.min.js"></script>
+<script src="../assets/js/libs/bootstrap/bootstrap.min.js"></script>
+<script src="../assets/js/libs/spin.js/spin.min.js"></script>
+<script src="../assets/js/libs/autosize/jquery.autosize.min.js"></script>
+<script src="../assets/js/libs/bootstrap-rating/bootstrap-rating-input.min.js"></script>
+<script src="../assets/js/libs/nanoscroller/jquery.nanoscroller.min.js"></script>
+<script src="../assets/js/core/source/App.js"></script>
+<script src="../assets/js/core/source/AppNavigation.js"></script>
+<script src="../assets/js/core/source/AppOffcanvas.js"></script>
+<script src="../assets/js/core/source/AppCard.js"></script>
+<script src="../assets/js/core/source/AppForm.js"></script>
+<script src="../assets/js/core/source/AppNavSearch.js"></script>
+<script src="../assets/js/core/source/AppVendor.js"></script>
+<script src="../assets/js/core/demo/Demo.js"></script>
+<script src="../assets/js/core/demo/DemoDocs.js"></script>
+
+	
+	
+	<!-- END JAVASCRIPT -->
+
+	
+	
+	
+<div id="device-breakpoints"><div class="device-xs visible-xs" data-breakpoint="xs"></div><div class="device-sm visible-sm" data-breakpoint="sm"></div><div class="device-md visible-md" data-breakpoint="md"></div><div class="device-lg visible-lg" data-breakpoint="lg"></div></div></body></html>
