@@ -26,11 +26,11 @@
 	</head>
 	<body class="menubar-hoverable header-fixed menubar-pin ">
 
-		
+		<?php include 'header.php';?>
 
 		<!-- BEGIN CONTENT-->
 			<div id="content">
-<?php include 'test.php';?>
+
 				<!-- BEGIN BLANK SECTION -->
 				<section>
 					<div class="section-header">
